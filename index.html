@@ -97,6 +97,7 @@
 
         function getLyrics(artist, title) {
             const single = document.getElementById('singleLyrics');
+            single.innerHTML = '';
             fetch(`https://api.lyrics.ovh/v1/${artist}/${title}`)
                 .then(res => res.json())
                 .then(data => {
